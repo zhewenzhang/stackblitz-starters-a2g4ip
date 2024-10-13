@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+@import 'react-data-grid/lib/styles.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Inter', sans-serif;
+  @apply bg-gray-900 text-gray-200;
+}
+
+.glass-morphism {
+  @apply bg-gray-800 bg-opacity-50 backdrop-filter backdrop-blur-lg;
+}
+
+input, select {
+  @apply bg-gray-700 border-gray-600 text-gray-200 focus:border-blue-500 focus:ring-blue-500;
+}
+
+button {
+  @apply transition duration-300 ease-in-out transform hover:scale-105;
+}
+
+/* 添加一些动画效果 */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* 自定义滚动条 */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-600 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-500;
+}
+
+/* 自定义 react-data-grid 样式 */
+.rdg-light {
+  --rdg-background-color: #1f2937;
+  --rdg-header-background-color: #111827;
+  --rdg-row-hover-background-color: #374151;
+  --rdg-row-selected-background-color: #4b5563;
+  --rdg-border-color: #4b5563;
+  --rdg-cell-border-color: #4b5563;
+  --rdg-cell-color: #e5e7eb;
+  --rdg-header-row-color: #e5e7eb;
+  color: #e5e7eb;
+}
+
+.rdg-light .rdg-cell {
+  border-color: #4b5563;
+}
+
+.rdg-light .rdg-header-row {
+  background-color: #111827;
+}
